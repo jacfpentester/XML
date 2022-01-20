@@ -1,0 +1,9 @@
+<?xml version="1.1" encoding="UTF-8" ?>
+ <!DOCTYPE mecanico SYSTEM "Actividad1.dtd">
+<mecanico nombremecanico="Manuel">
+    <automovil matricula="2324plk" >
+        <trabajos>Cambio Aceite</trabajos>
+        <fecha>14/5/2021</fecha>
+        <precio>234€</precio>
+    </automovil>
+</mecanico>
