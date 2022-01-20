@@ -1,0 +1,11 @@
+<!ELEMENT mecanico (automovil*) >
+<!ATTLIST mecanico nombremecanico CDATA "Nombre Mecanico">
+
+<!ELEMENT automovil (trabajos, fecha, precio) >
+<!ATTLIST automovil matricula CDATA "Matricula">
+
+<!ELEMENT trabajos (#PCDATA) >
+
+<!ELEMENT fecha (#PCDATA) >
+
+<!ELEMENT precio (#PCDATA) >

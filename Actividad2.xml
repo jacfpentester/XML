@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ticket SYSTEM "Actividad2.dtd">
+<ticket>
+  <datosticket id="TICKET0"> <!-- Le agregamos  el prefijo TICKET para poder usar el parametro ID y hacerlo unico-->
+  <fechahora>20/10/2020</fechahora>
+      <preciototal>
+        <preciobase>200€</preciobase>
+        <iva>16%</iva>
+        <pvptotal  moneda="Euros">232€</pvptotal>
+      </preciototal>
+      <formapago>
+        <efectivo>no</efectivo>
+        <tarjeta tipo="VISA">
+         <numerotarjeta>4545454568</numerotarjeta>
+         <nombretarjeta>Banco General</nombretarjeta>
+        </tarjeta>
+      </formapago>
+  </datosticket>
+  
+  <datoscomercio>
+    <nombrecomercio>Centro Comercial Manuel</nombrecomercio>
+    <direccioncomercio>Calle Magnolia  num 5</direccioncomercio>
+    <cifcomercio>B345623465</cifcomercio>
+    <telefonocomercio>53564542</telefonocomercio>
+  </datoscomercio>
+  
+   <datoscompra>
+    <nombrearticulo>coche</nombrearticulo>
+    <cantidadarticulo>1</cantidadarticulo>
+    <preciounitarioarticulo>23€</preciounitarioarticulo>
+    <ivaarticulo>16%</ivaarticulo>
+    <pvparticulo>31€</pvparticulo>
+  </datoscompra>
+  
+   <datoscompra>
+    <nombrearticulo>coche</nombrearticulo>
+    <cantidadarticulo>1</cantidadarticulo>
+    <preciounitarioarticulo>23€</preciounitarioarticulo>
+    <ivaarticulo>16%</ivaarticulo>
+    <pvparticulo>31€</pvparticulo>
+  </datoscompra>
+</ticket>

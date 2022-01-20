@@ -1,0 +1,35 @@
+<!ELEMENT ticket (datosticket, datoscomercio,datoscompra+)>
+
+<!--DATOS DEL TICKET-->
+<!ELEMENT datosticket (fechahora,preciototal,formapago)>
+<!ATTLIST datosticket id CDATA  #REQUIRED>
+
+<!ELEMENT fechahora (#PCDATA)>
+<!ELEMENT preciototal (preciobase,iva,pvptotal)>
+  <!ELEMENT preciobase (#PCDATA)>
+  <!ELEMENT iva (#PCDATA)>
+  <!ELEMENT pvptotal (#PCDATA)>
+  <!ATTLIST pvptotal moneda CDATA "Euros">
+
+<!--FORMA PAGO-->
+  <!ELEMENT formapago (efectivo?,tarjeta?)>
+    <!ELEMENT efectivo (#PCDATA)>
+    <!ELEMENT tarjeta (numerotarjeta?, nombretarjeta?)>
+    <!ATTLIST tarjeta tipo CDATA "VISA">
+        <!ELEMENT numerotarjeta (#PCDATA)>
+        <!ELEMENT nombretarjeta (#PCDATA)>
+        
+<!--DATOS DEL COMERCIO-->
+<!ELEMENT datoscomercio  (nombrecomercio,direccioncomercio,cifcomercio,telefonocomercio)>
+<!ELEMENT nombrecomercio (#PCDATA)>
+<!ELEMENT direccioncomercio (#PCDATA)>
+<!ELEMENT cifcomercio (#PCDATA)>
+<!ELEMENT telefonocomercio (#PCDATA)>
+
+<!--DATOS DE COMPRA-->
+<!ELEMENT datoscompra (nombrearticulo,cantidadarticulo,preciounitarioarticulo,ivaarticulo,pvparticulo)>
+<!ELEMENT nombrearticulo (#PCDATA)>
+<!ELEMENT cantidadarticulo (#PCDATA)>
+<!ELEMENT preciounitarioarticulo (#PCDATA)>
+<!ELEMENT ivaarticulo (#PCDATA)>
+<!ELEMENT pvparticulo (#PCDATA)>
