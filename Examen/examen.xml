@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="examen.xsl"?>
+
+<concesionario codigo_unico="965874">
+    <coches>
+        <coche codigo="A1">
+            <matricula disponible="true">1234-BBB</matricula>
+            <plazas>4</plazas>
+            <marca nombre="SEAT"/>
+            <nombre_modelo>ALTEA</nombre_modelo>
+        </coche>
+        <coche codigo="B2">
+            <matricula disponible="false">5678-CCC</matricula>
+            <plazas>5</plazas>
+            <marca nombre="AUDI"/>
+            <nombre_modelo>A4</nombre_modelo>
+        </coche>
+        <coche codigo="C3">
+            <matricula disponible="true">9067-DYC</matricula>
+            <plazas>7</plazas>
+            <marca nombre="RENAULT"/>
+            <nombre_modelo>LAGUNA</nombre_modelo>
+        </coche>        
+    </coches>
+</concesionario>
