@@ -1,1 +1,76 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+<xsl:output method="html" version="5.0" encoding="UTF-8" indent="yes" />
+<!-- Plantilla raíz -->
+<xsl:template match="/concesionario">
+<html>
+<head>
+</head>
+<body>
+<h1>CONCESIONARIO 965874</h1>
+<h2>Disponibilidad de automoviles</h2>
+<table cellpadding="10" border="3" style="solid" bordercolor="black">
+<tr bgcolor="gray">
+<th>Codigo</th>
+<th>Marca</th>
+<th>Modelo</th>
+<th>Matricula</th>
+<th>Plazas</th>
+</tr>
+<!-- recorremos todos los coche de coches -->
+<xsl:for-each select="coches/coche">
+<!-- ordenamos por plazas -->
+<xsl:sort data-type="number" select="plazas" order="descending"/>
+<!-- realizamos una seleccion de los que tengan atributo
+disponible true
+en caso afirmativo creamos la fila de la columna y en cada
+celda metemos los parametros que nos piden
+en casode que no sea true lo mandamos a otherwise pues solo
+se supone que hay dos parametros true o false
+por lo crearemos la fila y cambiamos el fonso a rojo -->
+<xsl:choose>
+<xsl:when test="matricula/@disponible = 'true'">
+<tr bgcolor="white">
+<td>
+<xsl:value-of select="@codigo"/>
+</td>
+<td>
+<xsl:value-of select="marca/@nombre"/>
+</td>
+<td>
+<xsl:value-of select="nombre_modelo"/>
+</td>
+<td>
+<xsl:value-of select="matricula"/>
+</td>
+<td>
+<xsl:value-of select="plazas"/>
+</td>
+</tr>
+</xsl:when>
+<xsl:otherwise>
+<tr bgcolor="red">
+<td>
+<xsl:value-of select="@codigo"/>
+</td>
+<td>
+<xsl:value-of select="marca/@nombre"/>
+</td>
+<td>
+<xsl:value-of select="nombre_modelo"/>
+</td>
+<td>
+<xsl:value-of select="matricula"/>
+</td>
+<td>
+<xsl:value-of select="plazas"/>
+</td>
+</tr>
+</xsl:otherwise>
+</xsl:choose>
+</xsl:for-each>
+</table>
+</body>
+</html>
+</xsl:template>
+</xsl:stylesheet>
